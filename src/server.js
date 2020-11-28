@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 // app.js 에게 퍼그를 써야한다고 신호를 줌
-// view engine <- 키워드
+// pug <- 키워드
 app.set("view engine", "pug");
 
 // app에게 morgan를 써야한다고 신호를 준다.
