@@ -2,7 +2,7 @@ import express from "express"; // express framework를 사용하기 위해 impor
 import dotenv from "dotenv";
 dotenv.config(); // 보안 코딩
 import morgan from "morgan"; // debugging을 위해 morgan을 import함
-import globalController from "./controller/globalController";
+import globalRouter from "./router/globalRouter";
 
 const PORT = process.env.PORT;
 
@@ -17,7 +17,7 @@ app.set("view engine", "pug");
 // dev <- 키워드
 app.use(morgan(`dev`));
 
-app.get("/");
+app.get("/", globalRouter);
 
 // 설정 끝난 후 Server Start
 app.listen(PORT, () => {
