@@ -8,3 +8,13 @@ const NODEJS = `/nodejs`;
 const MONGODB = `/mongoDB`;
 const JAVASCRIPT = `/javascript`;
 const REACT = `/react`;
+
+export const routers = {
+  HOME,
+  CONTACT,
+  DEVELOPMENT,
+  NODEJS,
+  MONGODB,
+  JAVASCRIPT,
+  REACT,
+};
