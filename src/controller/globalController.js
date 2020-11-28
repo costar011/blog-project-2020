@@ -3,7 +3,7 @@ const homeController = (req, res) => {
 };
 
 const contactController = (req, res) => {
-  res.render("screens/home");
+  res.render("screens/contact");
 };
 
 export const globalController = {

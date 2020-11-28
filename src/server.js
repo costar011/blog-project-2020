@@ -19,6 +19,8 @@ app.use(morgan(`dev`));
 
 app.get("/", globalRouter);
 
+app.get("/contact", globalRouter);
+
 // 설정 끝난 후 Server Start
 app.listen(PORT, () => {
   console.log(`✅  ${PORT} Server Start`);
