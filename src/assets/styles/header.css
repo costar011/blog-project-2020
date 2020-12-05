@@ -27,6 +27,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around; /* 일정한 간격으로 벌리는 코드 */
+  font-family: "Arimo", sans-serif;
 }
 
 .header a {
@@ -39,5 +40,48 @@
 }
 
 .header a:hover {
-  color: #fff;
+  color: #f7f1e3;
+}
+
+.devMenu {
+  height: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 35px;
+}
+
+.devMenu:hover .subBox {
+  display: block;
+}
+
+.subBox {
+  display: none;
+  position: absolute; /* position: absolute <- 따로 움직인다는 코드*/
+  width: 200px;
+
+  box-shadow: 3px 4px 3px #999;
+  margin-top: 50px;
+}
+
+.subBox:hover {
+  display: block;
+}
+
+.subBox h2 {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+}
+
+.subBox h2 a {
+  text-decoration: none;
+  color: #0b0b0b;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.4s;
+  font-family: "Arimo", sans-serif;
+}
+
+.subBox h2 a:hover {
+  color: #45aaf2;
 }
