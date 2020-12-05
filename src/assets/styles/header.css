@@ -56,7 +56,7 @@
 
 .subBox {
   display: none;
-  position: absolute; /* position: absolute <- 따로 움직인다는 코드*/
+  position: absolute; /* position: absolute <- 따로 움직인다는 코드 */
   width: 200px;
 
   box-shadow: 3px 4px 3px #999;

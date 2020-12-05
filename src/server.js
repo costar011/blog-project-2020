@@ -20,6 +20,7 @@ app.set("view engine", "pug");
 // app에게 morgan를 써야한다고 신호를 준다.
 // dev <- 키워드
 app.use(morgan(`dev`));
+
 // app.js 에게 CSS나 js는 /assets에 있다.
 app.use(express.static(path.join(__dirname, "/assets")));
 
