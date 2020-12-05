@@ -27,7 +27,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around; /* 일정한 간격으로 벌리는 코드 */
-  font-family: "Arimo", sans-serif;
+  font-family: "Kelly Slab", cursive;
 }
 
 .header a {
@@ -36,7 +36,7 @@
   cursor: pointer;
   padding: 5px;
   transition: 0.4s;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kelly Slab", cursive;
 }
 
 .header a:hover {
@@ -46,7 +46,7 @@
 .devMenu {
   height: 100%;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.5s;
   margin-top: 35px;
 }
 
@@ -79,7 +79,7 @@
   cursor: pointer;
   padding: 5px;
   transition: 0.4s;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kelly Slab", cursive;
 }
 
 .subBox h2 a:hover {
