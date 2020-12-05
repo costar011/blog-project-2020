@@ -1,8 +1,8 @@
 .header {
   width: 100%;
   height: 50px;
-  background-color: #45aaf2;
-  color: #0c2461;
+  background-color: #17c0eb;
+  color: #30336b;
 
   display: flex;
   flex-direction: row;
@@ -40,13 +40,13 @@
 }
 
 .header a:hover {
-  color: #f7f1e3;
+  color: #dff9fb;
 }
 
 .devMenu {
   height: 100%;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.7s;
   margin-top: 35px;
 }
 
@@ -60,11 +60,12 @@
   width: 200px;
 
   box-shadow: 3px 4px 3px #999;
-  margin-top: 50px;
+  margin-top: 55px;
 }
 
 .subBox:hover {
   display: block;
+  color: #dff9fb;
 }
 
 .subBox h2 {
@@ -83,5 +84,5 @@
 }
 
 .subBox h2 a:hover {
-  color: #45aaf2;
+  color: #0fbcf9;
 }
