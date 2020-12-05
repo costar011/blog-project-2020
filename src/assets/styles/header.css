@@ -1,0 +1,43 @@
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #45aaf2;
+  color: #0c2461;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.header .header__col1 {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__col2 {
+  width: 450px;
+  min-width: 450px; /* min-width -> 최소값 */
+  height: 100%;
+}
+
+.header .header__col2 .header__col2__ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; /* 일정한 간격으로 벌리는 코드 */
+}
+
+.header a {
+  text-decoration: none;
+  color: #0b0b0b;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.4s;
+  font-family: "Arimo", sans-serif;
+}
+
+.header a:hover {
+  color: #fff;
+}

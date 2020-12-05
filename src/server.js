@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 dotenv.config(); // 보안 코딩
 import morgan from "morgan"; // debugging을 위해 morgan을 import함
 import globalRouter from "./router/globalRouter";
+import path from "path";
 
 const PORT = process.env.PORT;
 
@@ -13,9 +14,14 @@ const app = express();
 // pug <- 키워드
 app.set("view engine", "pug");
 
+// 내 경로 확인 하는 법
+// console.log(path.resolve(__dirname));
+
 // app에게 morgan를 써야한다고 신호를 준다.
 // dev <- 키워드
 app.use(morgan(`dev`));
+// app.js 에게 CSS나 js는 /assets에 있다.
+app.use(express.static(path.join(__dirname, "/assets")));
 
 app.get("/", globalRouter);
 
