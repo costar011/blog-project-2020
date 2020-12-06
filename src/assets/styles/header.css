@@ -22,12 +22,10 @@
 .header .header__col2 .header__col2__ul {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around; /* 일정한 간격으로 벌리는 코드 */
-  font-family: "Kelly Slab", cursive;
+  justify-content: space-around;
 }
 
 .header a {
@@ -35,18 +33,18 @@
   color: #0b0b0b;
   cursor: pointer;
   padding: 5px;
-  transition: 0.4s;
+  transition: 0.5s;
   font-family: "Kelly Slab", cursive;
 }
 
 .header a:hover {
-  color: #dff9fb;
+  color: #3742fa;
 }
 
 .devMenu {
   height: 100%;
   cursor: pointer;
-  transition: 0.7s;
+  transition: 0.5;
   margin-top: 35px;
 }
 
@@ -58,14 +56,12 @@
   display: none;
   position: absolute; /* position: absolute <- 따로 움직인다는 코드 */
   width: 200px;
-
-  box-shadow: 3px 4px 3px #999;
-  margin-top: 55px;
+  margin-top: 15px;
+  box-shadow: 4px 4px 3px #999999;
 }
 
 .subBox:hover {
   display: block;
-  color: #dff9fb;
 }
 
 .subBox h2 {
@@ -76,13 +72,13 @@
 
 .subBox h2 a {
   text-decoration: none;
-  color: #0b0b0b;
+  color: #747d8c;
   cursor: pointer;
   padding: 5px;
   transition: 0.4s;
   font-family: "Kelly Slab", cursive;
 }
 
-.subBox h2 a:hover {
+header h2 a:hover {
   color: #0fbcf9;
 }
