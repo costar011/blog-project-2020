@@ -1,5 +1,5 @@
 import express from "express"; // express framework를 사용하기 위해 import함
-import dotenv from "dotenv";
+import dotenv from "dotenv"; // 보안코딩을 위해 dotenv를 import함
 dotenv.config(); // 보안 코딩
 import morgan from "morgan"; // debugging을 위해 morgan을 import함
 import globalRouter from "./router/globalRouter";
