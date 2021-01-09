@@ -20,6 +20,11 @@
   background-color: darkgoldenrod;
 
   transition: 0.8s;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .home .homeArea1__quickMenu:hover {
@@ -45,4 +50,27 @@
   width: 50%;
   height: 100%;
   background-color: blue;
+}
+
+.quickBox {
+  color: #fff;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  border: 0.5px solid #fff;
+}
+
+.quickBox i {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.quickBox p {
+  font-size: 20px;
+  font-weight: 600;
 }
