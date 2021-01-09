@@ -1,0 +1,48 @@
+.home {
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+.home .homeArea1 {
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .homeArea1__quickMenu {
+  width: 900px;
+  height: 200px;
+
+  background-color: darkgoldenrod;
+
+  transition: 0.8s;
+}
+
+.home .homeArea1__quickMenu:hover {
+  background-color: darkgray;
+}
+
+.home .homeArea2 {
+  width: 100%;
+  height: 70%;
+  background-color: darkblue;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.home .homeArea2 .homeArea2__col1 {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+
+.home .homeArea2 .homeArea2__col2 {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
