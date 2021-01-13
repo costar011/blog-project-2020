@@ -24,7 +24,7 @@ app.use(morgan(`dev`));
 // app.js 에게 CSS나 js는 /assets에 있다.
 app.use(express.static(path.join(__dirname, "/assets")));
 
-app.get("/", globalRouter);
+app.use("/", globalRouter);
 
 // 설정 끝난 후 Server Start
 app.listen(PORT, () => {

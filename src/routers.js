@@ -1,8 +1,8 @@
-// global router
+//global router
 const HOME = "/";
 const CONTACT = `/contact`;
 
-// development router
+//development router
 const DEVELOPMENT = `/development`;
 const NODEJS = `/nodejs`;
 const MONGODB = `/mongoDB`;
