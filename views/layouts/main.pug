@@ -12,25 +12,25 @@ html(lang="en")
 
     body
         header.header
-          div.header__col1
-
-          div.header__col2
-            ul.header__col2__ul
+          .header__col1
+          .header__col2
+              ul.header__col2__ul
                 li.header__col2__ul__list
-                a(href="/") HOME
-                li.header__col2__ul__list.devMenu DEV
-                    div.subBox
-                        h2 
-                           a(href="#") Javascript
+                    a(href="/") home
+                li.header__col2__ul__list.devMenu dev
+                    .subBox
                         h2
-                            a(href="#") MongoDB
+                            a(href="javascript") Javascript
                         h2
-                            a(href="#") Node.Js
+                            a(href="#") Nodejs
+                        h2
+                            a(href="#") Mongodb
                         h2
                             a(href="#") React
+
                 li.header__col2__ul__list
-                a(href="/contact") CONTACT
+                    a(href="/contact") contact
 
         block content
 
-        footer.footer 
+        footer.footer FOOTER
