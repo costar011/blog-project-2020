@@ -4,6 +4,7 @@ dotenv.config(); // 보안 코딩
 import morgan from "morgan"; // debugging을 위해 morgan을 import함
 import globalRouter from "./router/globalRouter";
 import path from "path";
+import connect from "../db";
 
 const PORT = process.env.PORT;
 
@@ -23,6 +24,7 @@ app.use(morgan(`dev`));
 
 // app.js 에게 CSS나 js는 /assets에 있다.
 app.use(express.static(path.join(__dirname, "/assets")));
+connect();
 
 app.use("/", globalRouter);
 
