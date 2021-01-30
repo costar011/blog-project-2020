@@ -1,0 +1,15 @@
+extends ../layouts/main.pug
+
+block content
+    .boardWrapper
+        section.boardWrapper__titleArea.ta
+            .ta__box
+            .ta__title #{postData.title}
+        section.boardWrapper__contentArea.ca
+            .ca__box
+            .ca__content #{postData.description}
+    .boardFooter
+        section.boardFooter__infoArea 
+             p #{postData.author}
+             p #{postData.createdAt}
+    

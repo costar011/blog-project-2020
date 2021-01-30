@@ -3,6 +3,7 @@ import dotenv from "dotenv"; // 보안코딩을 위해 dotenv를 import함
 dotenv.config(); // 보안 코딩
 import morgan from "morgan"; // debugging을 위해 morgan을 import함
 import globalRouter from "./router/globalRouter";
+import boardRouter from "./router/boardRouter";
 import path from "path";
 import connect from "../db";
 
@@ -27,6 +28,8 @@ app.use(express.static(path.join(__dirname, "/assets")));
 connect();
 
 app.use("/", globalRouter);
+
+app.use("/board", boardRouter);
 
 // 설정 끝난 후 Server Start
 app.listen(PORT, () => {

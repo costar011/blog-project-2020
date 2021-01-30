@@ -1,4 +1,4 @@
-import mongoose, { isValidObjectId } from "mongoose";
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 // const <--변하지 않는다는 의미  Schema <-- 객체는 대문자로 시작함
@@ -30,7 +30,7 @@ const Post = new Schema(
       type: String,
       required: true,
     },
-    lastUpdataAt: {
+    lastUpdatedAt: {
       type: String,
       required: true,
     },
@@ -38,10 +38,6 @@ const Post = new Schema(
       type: Boolean,
       required: true,
       default: false,
-    },
-    comments: {
-      type: Array,
-      required: true,
     },
     no: {
       type: Number,
@@ -52,4 +48,3 @@ const Post = new Schema(
 );
 
 export default mongoose.model(`Post`, Post, `Post`);
-// (`별칭`, 실제 객체 , `몽고DB안에 있는 어떤 컬렉션과 연결할건데?`)

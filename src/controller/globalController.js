@@ -12,7 +12,7 @@ const contactController = (req, res) => {
 const javascriptController = async (req, res) => {
   try {
     const dataResult = await Post.find().populate({
-      path: "postType",
+      path: "PostType",
       model: PostType,
     });
 
@@ -21,8 +21,6 @@ const javascriptController = async (req, res) => {
     console.log(e);
     res.render("screens/home");
   }
-
-  res.render("screens/javascript");
 };
 
 export const globalController = {

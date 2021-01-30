@@ -9,6 +9,9 @@ const MONGODB = `/mongoDB`;
 const JAVASCRIPT = `/javascript`;
 const REACT = `/react`;
 
+// board
+const BOARD_DETAIL = `/detail/:id`;
+
 export const routers = {
   HOME,
   CONTACT,
@@ -17,4 +20,5 @@ export const routers = {
   MONGODB,
   JAVASCRIPT,
   REACT,
+  BOARD_DETAIL,
 };
