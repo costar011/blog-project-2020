@@ -1,36 +1,35 @@
 .boardWrapper {
   width: 100%;
-  padding: 50px 0px;
-
+  padding: 50px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.boardWrapper .titleArea {
+.boardWrapper .boardWrapper__titleArea {
   width: 1000px;
   height: 100px;
-
   margin-bottom: 40px;
 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .ta__box {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 
   border: 5px solid lightblue;
   box-shadow: 2px 3px 4px gray;
 }
 
 .ta__title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+
   margin-left: -40px;
+  margin-bottom: 30px;
 }
 
 .boardWrapper .boardWrapper__contentArea {
@@ -53,25 +52,23 @@
 }
 
 .ca__content {
-  font-size: 17px;
+  font-size: 18px;
 
   margin-left: -40px;
   padding: 30px 0px;
 }
 
-.boardFotoer {
+.boardFooter {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.boardFotoer .boardFotoer__infoArea {
+.boardFooter .boardFooter__infoArea {
   width: 1000px;
   height: 100px;
-  background-color: sienna;
 
   display: flex;
   flex-direction: column;
