@@ -98,7 +98,7 @@
   border-radius: 3px;
   transition: 0.4s;
 
-  box-shadow: 2px 3px 3.5px #999;
+  box-shadow: 2px 3.5px 3.5px #999;
 }
 
 .boardButonArea .boardButtonArea__goList:hover {

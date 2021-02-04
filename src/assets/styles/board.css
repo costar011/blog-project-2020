@@ -154,3 +154,17 @@
   align-items: center;
   justify-content: center;
 }
+
+.writeBtn {
+  width: 200px;
+  height: 25px;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background-color: lightskyblue;
+  color: #fff;
+
+  box-shadow: 2px 3.5px 3.5px #999;
+}
