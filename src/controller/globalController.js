@@ -1,5 +1,7 @@
 import Post from "../models/Post";
 import PostType from "../models/PostType";
+import dotenv from "dotenv";
+dotenv.config();
 
 const homeController = (req, res) => {
   console.log("I'm home Controller");
@@ -16,7 +18,13 @@ const javascriptController = async (req, res) => {
       model: PostType,
     });
 
-    res.render("screens/javascript", { dataResult });
+    if (process.env.NODE_ENV === "development") {
+      console.log("dev mode!!!!!!!!");
+    }
+
+    const devMode = process.env.NODE_ENV === "development";
+
+    res.render("screens/javascript", { dataResult, devMode });
   } catch (e) {
     console.log(e);
     res.render("screens/home");

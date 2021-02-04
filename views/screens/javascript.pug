@@ -21,3 +21,6 @@ block content
                         a(href=`/board/detail/${data._id}`) #{data.title}
                     li.boardBody__field #{data.createdAt}
                     li.boardBody__field #{data.hit}
+    
+    if devMode
+        h1 dev Mode
