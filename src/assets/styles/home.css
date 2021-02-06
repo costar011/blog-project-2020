@@ -42,7 +42,7 @@
 .home .homeArea2 .homeArea2__col1 {
   width: 50%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1483817101829-339b08e8d83f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1593&q=80");
+  background-image: url("https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Y29kaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
   background-position: center center;
 }
@@ -62,14 +62,13 @@
   margin: 0 0 30px;
   font-weight: 600;
   padding: 10px;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid skyblue;
 }
 .home .homeArea2 .homeArea2__col2 h2 {
   font-size: 18px;
   margin: 10 0px;
   font-weight: 600;
   padding: 10px;
-  border-bottom: 2px solid darkblue;
 }
 
 .quickBox {
@@ -88,7 +87,7 @@
 }
 
 .quickBox:hover i {
-  color: darkslateblue;
+  color: #f6e58d;
 }
 
 .quickBox i {
