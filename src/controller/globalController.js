@@ -11,6 +11,7 @@ const homeController = (req, res) => {
 const contactController = (req, res) => {
   res.render("screens/contact");
 };
+
 const javascriptController = async (req, res) => {
   try {
     const dataResult = await Post.find().populate({
@@ -31,8 +32,14 @@ const javascriptController = async (req, res) => {
   }
 };
 
+const boardwriteController = async (req, res) => {
+  console.log("I'm BOARDWRITE PAGE!!!!!!!!!!");
+  res.render("screens/boardWrite");
+};
+
 export const globalController = {
   homeController,
   contactController,
   javascriptController,
+  boardwriteController,
 };

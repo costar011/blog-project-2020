@@ -12,6 +12,8 @@ const REACT = `/react`;
 // board
 const BOARD_DETAIL = `/detail/:id`;
 
+const BOARD_WRITE = `/boardWrite`;
+
 export const routers = {
   HOME,
   CONTACT,
@@ -21,4 +23,5 @@ export const routers = {
   JAVASCRIPT,
   REACT,
   BOARD_DETAIL,
+  BOARD_WRITE,
 };
