@@ -21,8 +21,9 @@ const boardWriteController = (req, res) => {
 const boardWriteDbController = (req, res) => {
   console.log(req.body.title);
   console.log(req.body.desc);
-  // 1. postType에 들어갈 objectid가 필요해요.
-  // 2. 현재날짜 시간을 구해서 -> 문자열로 형변환.
+
+  // 1. postType에 들어갈 objectId가 필요하다
+  // 2. 현재날짜 시간을 구해서 -> 문자열로 형변환
 
   globalController.javascriptController(req, res);
 };
