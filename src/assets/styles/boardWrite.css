@@ -1,0 +1,83 @@
+.writeWrapper {
+  width: 100%;
+  margin: 100px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.writeWrapper form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.writeWrapper h2 {
+  margin-bottom: 100px;
+
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.writeWrapper .writeWrapper__title {
+  width: 1000px;
+  height: 30px;
+  padding: 10px;
+
+  outline: none;
+  background: none;
+
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #999;
+  transition: 0.5s;
+  border: 1px solid #999;
+  margin-bottom: 20px;
+}
+
+.writeWrapper .writeWrapper__title:focus {
+  border: 2px solid #777;
+}
+
+.writeWrapper .writeWrapper__desc {
+  width: 1000px;
+  height: 400px;
+  padding: 10px;
+
+  outline: none;
+  background: none;
+
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #999;
+  transition: 0.5s;
+  border: 1px solid #999;
+  resize: none;
+}
+
+.writeWrapper .writeWrapper__desc:focus {
+  border: 2px solid #777;
+}
+
+.writeWrapper .writeWrapper__btn {
+  width: 120px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: slategrey;
+  color: #fff;
+  box-shadow: 3px 3px 3px #999;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.writeWrapper .writeWrapper__btn:focus {
+  border: 2px solid #777;
+}

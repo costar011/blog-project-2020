@@ -6,6 +6,7 @@ import globalRouter from "./router/globalRouter";
 import boardRouter from "./router/boardRouter";
 import path from "path";
 import connect from "../db";
+import bodyParser from "body-parser";
 
 const PORT = process.env.PORT;
 
@@ -25,6 +26,11 @@ app.use(morgan(`dev`));
 
 // app.js 에게 CSS나 js는 /assets에 있다.
 app.use(express.static(path.join(__dirname, "/assets")));
+
+//bodyParser 설정 두 개
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 connect();
 
 app.use("/", globalRouter);
