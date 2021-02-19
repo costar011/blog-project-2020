@@ -11,17 +11,12 @@ const homeController = (req, res) => {
 const contactController = (req, res) => {
   res.render("screens/contact");
 };
-
 const javascriptController = async (req, res) => {
   try {
     const dataResult = await Post.find().populate({
       path: "PostType",
       model: PostType,
     });
-
-    if (process.env.NODE_ENV === "development") {
-      console.log("dev mode!!!!!!!!");
-    }
 
     const devMode = process.env.NODE_ENV === "development";
 
@@ -32,8 +27,7 @@ const javascriptController = async (req, res) => {
   }
 };
 
-const boardwriteController = async (req, res) => {
-  console.log("I'm BOARDWRITE PAGE!!!!!!!!!!");
+const boardwriteController = (req, res) => {
   res.render("screens/boardWrite");
 };
 

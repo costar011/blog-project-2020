@@ -12,16 +12,14 @@ block content
                 li.boardHeader__field 번호
                 li.boardHeader__field 제목
                 li.boardHeader__field 작성일
-                li.boardHeader__field 조회수 
-
-            each data in dataResult
+                li.boardHeader__field 조회수  
+            each data in dataResult    
                 ul.boardBody
                     li.boardBody__field #{data.no}
                     li.boardBody__field
                         a(href=`/board/detail/${data._id}`) #{data.title}
                     li.boardBody__field #{data.createdAt}
                     li.boardBody__field #{data.hit}
-    
     if devMode
-        button.writeBtn 
-            a(href=`/board/write/javascript`) 글 작성(devmode ✍🏻)
+        a(href="/board/write/javascript")
+            button.writeBtn 글 작성(devmode)

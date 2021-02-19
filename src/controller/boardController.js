@@ -1,5 +1,6 @@
 import Post from "../models/Post";
 import { globalController } from "./globalController";
+
 const detailController = async (req, res) => {
   try {
     const postData = await Post.findOne({ _id: req.params.id });
