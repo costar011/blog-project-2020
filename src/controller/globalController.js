@@ -2,6 +2,7 @@ import Post from "../models/Post";
 import PostType from "../models/PostType";
 import dotenv from "dotenv";
 dotenv.config();
+import middlewares from "../common/middlewares";
 
 const homeController = (req, res) => {
   console.log("I'm home Controller");
@@ -13,12 +14,12 @@ const contactController = (req, res) => {
 };
 const javascriptController = async (req, res) => {
   try {
-    const dataResult = await Post.find().populate({
+    const dataResult = await Post.find({ isDelete: false }).populate({
       path: "PostType",
       model: PostType,
     });
 
-    const devMode = process.env.NODE_ENV === "development";
+    const devMode = middlewares.checkDevMode();
 
     res.render("screens/javascript", { dataResult, devMode });
   } catch (e) {

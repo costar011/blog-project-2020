@@ -10,5 +10,6 @@ boardRouter.post(
   routers.BOARD_WRITE_DB,
   boardController.boardWriteDbController
 );
+boardRouter.post("/deleteBoard", boardController.deleteBoardController);
 
 export default boardRouter;

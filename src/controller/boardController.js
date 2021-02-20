@@ -2,11 +2,15 @@ import Post from "../models/Post";
 import PostType from "../models/PostType";
 import { globalController } from "./globalController";
 import mongoose from "mongoose";
+import middlewares from "../common/middlewares";
 
 const detailController = async (req, res) => {
   try {
     const postData = await Post.findOne({ _id: req.params.id });
-    res.render("screens/boardDetail", { postData });
+
+    const devMode = middlewares.checkDevMode();
+
+    res.render("screens/boardDetail", { postData, devMode });
   } catch (e) {
     console.log(e);
     res.render("screens/home");
@@ -61,10 +65,27 @@ const boardWriteDbController = async (req, res) => {
 
   globalController.javascriptController(req, res);
 };
-// 2. 현재날짜 시간을 구해서 -> 문자열로 형변환
+
+const deleteBoardController = async (req, res) => {
+  try {
+    const result = await Post.updateOne(
+      { _id: req.body.id },
+      {
+        $set: {
+          isDelete: true,
+        },
+      }
+    );
+  } catch (e) {
+    console.log(e);
+  }
+
+  globalController.javascriptController(req, res);
+};
 
 export const boardController = {
   detailController,
   boardWriteController,
   boardWriteDbController,
+  deleteBoardController,
 };
