@@ -11,5 +11,7 @@ boardRouter.post(
   boardController.boardWriteDbController
 );
 boardRouter.post("/deleteBoard", boardController.deleteBoardController);
+boardRouter.post("/updateBoard", boardController.boardUpdateController);
+boardRouter.post("/update", boardController.updateController);
 
 export default boardRouter;

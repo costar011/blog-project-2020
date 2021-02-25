@@ -1,12 +1,24 @@
 import Post from "../models/Post";
 import PostType from "../models/PostType";
-import { globalController } from "./globalController";
+import { globalController } from "../controller/globalController";
 import mongoose from "mongoose";
 import middlewares from "../common/middlewares";
 
 const detailController = async (req, res) => {
   try {
     const postData = await Post.findOne({ _id: req.params.id });
+
+    const currentHit = postData.hit;
+    const nextHit = parseInt(currentHit) + 1;
+
+    await Post.updateOne(
+      { _id: req.params.id },
+      {
+        $set: {
+          hit: nextHit,
+        },
+      }
+    );
 
     const devMode = middlewares.checkDevMode();
 
@@ -24,16 +36,11 @@ const boardWriteController = (req, res) => {
 };
 
 const boardWriteDbController = async (req, res) => {
-  console.log(req.body.title);
-  console.log(req.body.desc);
-  console.log(req.body.type);
-
   let searchType = "";
 
   if (req.body.type === "javascript") {
     searchType = "JS";
   }
-  // 1. postType에 들어갈 objectId가 필요하다
 
   try {
     const type = await PostType.findOne({ typeName: searchType });
@@ -56,9 +63,9 @@ const boardWriteDbController = async (req, res) => {
       no: postNo,
     });
 
-    console.log("❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️");
+    console.log("✅✅✅✅✅✅✅✅✅✅✅✅✅");
     console.log(result);
-    console.log("❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️");
+    console.log("✅✅✅✅✅✅✅✅✅✅✅✅✅");
   } catch (e) {
     console.log(e);
   }
@@ -67,6 +74,7 @@ const boardWriteDbController = async (req, res) => {
 };
 
 const deleteBoardController = async (req, res) => {
+  console.log(req.body.id);
   try {
     const result = await Post.updateOne(
       { _id: req.body.id },
@@ -83,9 +91,42 @@ const deleteBoardController = async (req, res) => {
   globalController.javascriptController(req, res);
 };
 
+const boardUpdateController = async (req, res) => {
+  try {
+    const board = await Post.findOne({ _id: req.body.id });
+
+    res.render("screens/boardUpdate", { board });
+  } catch (e) {
+    console.log(e);
+    globalController.javascriptController(req, res);
+  }
+};
+
+const updateController = async (req, res) => {
+  const {
+    body: { id, title, desc },
+  } = req;
+  try {
+    const result = await Post.updateOne(
+      { _id: id },
+      {
+        $set: {
+          title: title,
+          description: desc,
+        },
+      }
+    );
+  } catch (e) {
+    console.log(e);
+  }
+  globalController.javascriptController(req, res);
+};
+
 export const boardController = {
   detailController,
   boardWriteController,
   boardWriteDbController,
   deleteBoardController,
+  boardUpdateController,
+  updateController,
 };
